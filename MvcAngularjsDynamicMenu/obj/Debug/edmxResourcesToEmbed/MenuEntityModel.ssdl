@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MenuDatabaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MenuDatabaseModelStoreContainer">
+    <EntitySet Name="Tab_Menu" EntityType="MenuDatabaseModel.Store.Tab_Menu" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Tab_Menu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Url" Type="varchar" MaxLength="250" />
+    <Property Name="ParentID" Type="int" Nullable="false" />
+  </EntityType>
+</Schema>
